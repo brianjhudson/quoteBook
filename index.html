@@ -11,18 +11,18 @@
   </head>
   <body ng-controller="MainCtrl">
     <header><h1>QuoteBook</h1></header>
-    <input type="text" placeholder="Search quotes" / ng-model="searchText">
+    <div class="input-container">
+      <input type="text" placeholder="Search quotes" / ng-model="searchText">
+      <input type="text" ng-model="quote.text" placeholder="Add new quote"/>
+      <input type="text" ng-model="quote.author" placeholder="Add author" />
+      <button ng-click="addData(quote)">Add Quote</button>
+    </div>
     <div class="quotes-container">
       <p class="quote" ng-repeat="quote in quotes | filter: searchText">
         <span class="text">{{ quote.text }}</span>
         <span class="author">{{ quote.author }}</span>
         <span ng-click="removeData(quote.text)" class="delete"></span>
       </p>
-    </div>
-    <div class="input-container">
-      <input type="text" ng-model="quote.text" placeholder="Add new quote"/>
-      <input type="text" ng-model="quote.author" placeholder="Add author" />
-      <button ng-click="addData(quote)">Add Quote</button>
     </div>
   </body>
 </html>

@@ -23,8 +23,8 @@ angular.module('quoteBookApp')
 
   function addData(newQuote) {
     if (newQuote.text && newQuote.author) {
-      quotes.push(newQuote);
-    }
+      quotes.unshift(newQuote);
+      }
 
   }
   function removeData(textToRemove) {
@@ -33,8 +33,6 @@ angular.module('quoteBookApp')
         quotes.splice(i, 1);
       }
     }
-
   }
-
 
 });

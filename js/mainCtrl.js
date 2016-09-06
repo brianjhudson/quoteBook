@@ -5,4 +5,5 @@ angular.module('quoteBookApp').controller('MainCtrl', function($scope, mainServi
     $scope.quote = {};
   }
   $scope.removeData = mainService.removeData;
+
 });
