@@ -9,4 +9,32 @@ angular.module('quoteBookApp')
     { text: 'Life is what happens to you while you\'re busy making other plans.', author: 'John Lennon'},
     { text: 'What even is a jQuery?', author: 'Tyler S. McGinnis'}
   ];
+
+  this.getData = getData;
+  this.addData = addData;
+  this.removeData = removeData;
+
+
+
+
+  function getData() {
+    return quotes;
+  }
+
+  function addData(newQuote) {
+    if (newQuote.hasOwnProperty(text) && newQuote.hasOwnProperty(author)) {
+      quotes.push(newQuote);
+    }
+
+  }
+  function removeData(textToRemove) {
+    for (var i = quotes.length - 1; i >= 0; i--) {
+      if (quotes[i].text === textToRemove) {
+        quotes.splice(i, 1);
+      }
+    }
+
+  }
+
+
 });
