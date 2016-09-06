@@ -14,16 +14,39 @@ body {
   border-radius: 0 0 10px 10px;
 }
 .quote {
+  position: relative;
   padding: 20px;
   border-bottom: 4px solid #ccc;
   border-radius: 0 0 10px 10px;
 }
 .delete {
-  float: right;
+  position: absolute;
   width: 12px;
   height: 12px;
+  background: url('../close-button.png') no-repeat center;
+  background-size: contain;
+  bottom: 10px;
+  right: 10px;
 }
-.delete img {
-  width: 100%;
-  height: auto;
+.text::before , .text::after{
+  display: inline-block;
+  content: "  ";
+  width: 10px;
+  height: 10px;
+  background-size: 100% 100%;
+  margin-bottom: 10px;
+}
+.text {
+  font-size: 20px;
+}
+.text::before {
+  background-image: url('../open-quote.png');
+}
+.text::after {
+  background-image: url('../close-quote.png')
+}
+.author {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: hsl(0, 0%, 40%);
 }
