@@ -1,4 +1,4 @@
-angular.module('quoteBookApp').controller('mainCtrl', function($scope, mainService) {
+angular.module('quoteBookApp').controller('MainCtrl', function($scope, mainService) {
   $scope.isCtrlWorking = 'working'
   $scope.isSvcWorking = mainService.working;
 });
