@@ -10,5 +10,10 @@
     <script src="/js/mainService.js" charset="utf-8"></script>
   </head>
   <body ng-controller="MainCtrl">
+    <p ng-repeat="quote in quotes track by $index">
+      <span class="text">{{ quote.text }}</span>
+      <span class="author">{{ quote.author }}</span>
+      <button ng-click="removeData(quote.text)">Delete</button>
+    </p>
   </body>
 </html>
