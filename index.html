@@ -15,5 +15,8 @@
       <span class="author">{{ quote.author }}</span>
       <button ng-click="removeData(quote.text)">Delete</button>
     </p>
+    <input type="text" ng-model="quote.text" placeholder="Add new quote"/>
+    <input type="text" ng-model="quote.author" placeholder="Add author" />
+    <button ng-click="addData(quote)">Add Quote</button>
   </body>
 </html>
