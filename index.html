@@ -12,10 +12,10 @@
   <body ng-controller="MainCtrl">
     <header>QuoteBook</header>
     <div class="quotes-container">
-      <p class="" ng-repeat="quote in quotes track by $index">
+      <p class="quote" ng-repeat="quote in quotes track by $index">
         <span class="text">{{ quote.text }}</span>
         <span class="author">{{ quote.author }}</span>
-        <button ng-click="removeData(quote.text)">Delete</button>
+        <span ng-click="removeData(quote.text)" class="delete"><img src="close-button.png" alt=""></span>
       </p>
     </div>
     <input type="text" ng-model="quote.text" placeholder="Add new quote"/>
