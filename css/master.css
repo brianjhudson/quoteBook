@@ -6,18 +6,33 @@ body {
   width: 30%;
   margin: 0 auto;
 }
+header {
+  margin-top: 20px;
+  text-align: center;
+}
 .quotes-container {
   margin: 40px 0;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 3px solid #ccc;
+  border-top: 1px solid hsl(130, 100%, 80%);
+  border-left: 1px solid hsl(130, 100%, 80%);
+  border-right: 3px solid hsl(130, 100%, 80%);
   border-radius: 0 0 10px 10px;
 }
 .quote {
   position: relative;
+  display: block;
   padding: 20px;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 4px solid hsl(130, 100%, 80%);
   border-radius: 0 0 10px 10px;
+}
+.author {
+  display: block;
+  text-align: right;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: hsl(210, 100%, 60%);
+}
+.author::before {
+  content: "~";
 }
 .delete {
   position: absolute;
@@ -45,8 +60,13 @@ body {
 .text::after {
   background-image: url('../close-quote.png')
 }
-.author {
-  text-transform: uppercase;
-  font-weight: 400;
-  color: hsl(0, 0%, 40%);
+.input-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 10px;
 }
