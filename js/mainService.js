@@ -29,7 +29,7 @@ angular.module('quoteBookApp')
   }
   function removeData(textToRemove) {
     for (var i = quotes.length - 1; i >= 0; i--) {
-      if (quotes[i].text === textToRemove) {
+      if (quotes[i].text.toLowerCase() === textToRemove.toLowerCase()) {
         quotes.splice(i, 1);
       }
     }
