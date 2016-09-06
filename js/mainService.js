@@ -22,7 +22,7 @@ angular.module('quoteBookApp')
   }
 
   function addData(newQuote) {
-    if (newQuote.hasOwnProperty(text) && newQuote.hasOwnProperty(author)) {
+    if (newQuote.text && newQuote.author) {
       quotes.push(newQuote);
     }
 
