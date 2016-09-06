@@ -2,3 +2,21 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  width: 40%;
+  margin: 0 auto;
+}
+.quotes-container {
+  margin: 40px 0;
+  border-left: 1px solid #ccc;
+  border-right: 3px solid #ccc;
+  border-radius: 0 0 10px 10px;
+}
+.quote {
+  padding: 20px;
+  border-bottom: 4px solid #ccc;
+  border-radius: 0 0 10px 10px;
+}
+.delete {
+
+}
